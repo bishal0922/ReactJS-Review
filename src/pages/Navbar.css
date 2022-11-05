@@ -16,12 +16,12 @@ body{
     justify-content: space-between;
     align-items: center;
     font-size: large;
+    height: 6vh;
 }
 
 
 .navbar a {
     text-decoration: none;
-    padding: 10px;
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -29,6 +29,7 @@ body{
 .navbar a:hover{
     background-color: rgb(0, 0, 0);
     border-radius: 5px;
+    transition: .6s;
 }
 /* Home Section
     centered with 2vw margin left
