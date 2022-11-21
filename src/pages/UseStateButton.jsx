@@ -29,12 +29,14 @@ const UseStateButton = () => {
           </div>
         </div>
 
+        {/* Need to add a grid layout inside of usb-> usb-container-top /middle/bottom */}
 
         {/* <div className="usb-container-middle">
           <p>Some information about use state button</p>
         </div> */}
 
         {/* something for the middle and bottom */}
+
       </div>
     </div>
   )
