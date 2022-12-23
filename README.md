@@ -6,7 +6,6 @@
 
 ### Initial Look:
 
-10/5/2022 2:00:00 AM
 
 ![website designs](figma/websitecurrent11-5-20221-44am.png)
 
