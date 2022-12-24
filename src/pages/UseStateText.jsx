@@ -3,20 +3,34 @@ import { useState } from 'react'
 
 
 const UseStateText = () => {
-  const [text, setText] = React.useState('*Insert Name*')
+  const [formState, setFormState] = useState({
+    email: '',
+    password: '',
+    submitting: false,
+  });
   
-  const inputval = useRef(null)
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setFormState({ ...formState, submitting: true });
+    // send email and password to backend
+    // handle response
+    setFormState({ email: '', password: '', submitting: false });
+  };
 
   return (
     <div>
-      <h1>UseStateText</h1>
-      <p>Hey {text} thanks for being with us today</p>
+     <form onSubmit={handleSubmit}>
+       <label htmlFor="email">Email:</label>
+         <input type="email" id="email" value={formState.email} onChange={(e) => setFormState({ ...formState, email: e.target.value })}/>
+       <label htmlFor="password">Password:</label>
+        <input type="password" id="password" value={formState.password} onChange={(e) => setFormState({ ...formState, password: e.target.value })}/>
+    
+       <button type="submit" disabled={formState.submitting}>
+          Log in
+       </button>
 
-      <input type="text" placeholder='some' value={text} onChange={(e) => setText(e.target.value)}/>
-      <button onClilck={() => setText('asdfas')} >Click to reset</button>
-
-    </div>
-  
+  </form> 
+  </div>
   )
 }
 
