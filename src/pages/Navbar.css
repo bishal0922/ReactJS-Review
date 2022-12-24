@@ -3,12 +3,6 @@ body{
     padding: 0;
 }
 
-/* Entire Navbar
-    color is gray
-    display flex and stretch to fill the entire width
-    all the items are centered
-    all the fonts are large
-*/
 .navbar {
     width: 100vw;
     background-color: rgb(100, 98, 98);
